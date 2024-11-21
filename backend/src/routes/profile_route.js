@@ -1,5 +1,5 @@
 const express = require("express");
-const ProfileModel = require('../model/profile');
+const ProfileModel = require('../models/profileModel');
 const router = express.Router();
 
 router.get("/:id",async(req,res)=>{

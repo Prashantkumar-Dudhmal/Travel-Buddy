@@ -1,5 +1,5 @@
 const { z } = require("zod");
-const User = require("../models/signup.model");
+const signUpModel = require("../models/signUpModel");
 
 // JWT secret
 const JWT_SECRET = "password";
@@ -16,11 +16,11 @@ const userSchema = z.object({
 const createUser = async (req, res) => {
     try {
         // Validate request body using zod
-        const parsedData = userSchema.parse(req.body);
+        const Data = req.body;
 
         // Check if the user with the email exists already
-        let user = await User.findOne({ email: parsedData.email });
-        if (user) {
+        let user1 = await signUpModel.findOne({ email: Data.email });
+        if (user1) {
             return res.status(400).json({
                 success: false,
                 msg: "Sorry, a user with this email already exists!",
@@ -28,10 +28,10 @@ const createUser = async (req, res) => {
         }
 
         // Create a new user
-        user = await User.create({
-            name: parsedData.name,
-            email: parsedData.email,
-            password: parsedData.password, // Storing plain text password (Not secure)
+        let user = await signUpModel.create({
+            name: Data.name,
+            email: Data.email,
+            password: Data.password, // Storing plain text password (Not secure)
         });
 
         // Send success response

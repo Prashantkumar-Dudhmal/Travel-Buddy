@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { createUser } = require('../controller/signUpController')
 const  zod = require("zod");
 
 
@@ -11,7 +12,7 @@ router.get('/',(req,res)=>{
 
 
 router.post('/signup',(req,res)=>{
-     
+     createUser;
 })
 
 

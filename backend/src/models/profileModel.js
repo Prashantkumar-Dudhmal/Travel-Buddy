@@ -12,4 +12,4 @@ const UserSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-module.exports = mongoose.model('UserModel', UserSchema);
+module.exports = mongoose.model('profileModel', UserSchema);

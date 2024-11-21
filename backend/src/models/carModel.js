@@ -11,4 +11,4 @@ const CarSchema = new mongoose.Schema({
   carPhoto: { type: String }, // URL for the uploaded car photo
 });
 
-module.exports = mongoose.model('Car', CarSchema);
+module.exports = mongoose.model('carModel', CarSchema);
