@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { createUser } = require('../controller/signUpController')
+// const { createUser } = require('../controller/signUpController')
 const  zod = require("zod");
 const signUpModel = require("../models/signUpModel");
 
@@ -13,11 +13,11 @@ router.get('/',(req,res)=>{
 
 router.post('/signup',async (req,res)=>{
     try{
-       const username=req.body.username;
+       const name=req.body.name;
        const password=req.body.password;
        const email=req.body.email;
 
-       let user1 = await signUpModel.findOne({ email: Data.email });
+       let user1 = await signUpModel.findOne({ email: email });
         if (user1) {
             return res.status(400).json({
                 success: false,
@@ -26,9 +26,9 @@ router.post('/signup',async (req,res)=>{
         }
 
         let user = await signUpModel.create({
-            name:this.name,
-            email:this.email,
-            password:this.password // Storing plain text password (Not secure)
+            name:name,
+            email:email,
+            password:password // Storing plain text password (Not secure)
         });
 
         res.status(200).json({
