@@ -3,6 +3,7 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Home from './pages/Home'
 import SignIn from './pages/SignIn'
 import Navbar from './components/Navbar'
+import SignUp from'./pages/SignUp'
 import './App.css'
 
 function App() {
@@ -15,6 +16,9 @@ const router = createBrowserRouter([
   {
     path:"/SignIn",
     element:<><Navbar/><SignIn/></>
+  },{
+    path:"/SignUp",
+    element:<><Navbar/><SignUp/></>
   }
 ])
 
