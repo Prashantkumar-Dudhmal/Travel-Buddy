@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import './SignIn.css'
 
 function SignIn (){
-
+    const serverlink ='https://www.google.co.in/';
     const [formData, setFormData] = useState({
         username: '',
         password: ''
@@ -16,9 +16,13 @@ function SignIn (){
           [name]: value,
         }));
     };
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         //e.preventDefault();
-          // Simulate form submission (you can replace with API call)
+        fetch(url, { 
+          method: 'POST', 
+          headers: { 'Content-Type': 'application/json' }, 
+          body: JSON.stringify(params) 
+        }).then(response => response.json()) .then(data => console.log(data))
         console.log('Form submitted:', formData);
         alert('Sign In successful!');
           // You can redirect or handle further actions here after successful login
