@@ -14,6 +14,7 @@ app.use(
     })
   );
 app.use("/auth", require("./src/routes/auth_route"));
+app.use("/profile", require("./src/routes/profile_route"));
 
 app.listen(port,()=>{
     console.log("Server Started");
