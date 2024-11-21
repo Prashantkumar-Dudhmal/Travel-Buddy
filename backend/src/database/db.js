@@ -1,8 +1,10 @@
 const mongoose =require('mongoose')
+require("dotenv").config({ path: "./.env" });
 
+const mongooseURL = process.env.CONNECTION_STRING;
 async function MongoConnect()
 {
-    try{const a=await mongoose.connect('mongodb+srv://om:Qj4MsPqXNrHSlQdT@cohortlearning.4tw40.mongodb.net/TravelBuddy');
+    try{const a=await mongoose.connect(mongooseURL);
         console.log("db connected");
     }
     catch(e){
