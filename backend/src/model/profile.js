@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const UserSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true }, // Use bcrypt to hash this
   phoneNumber: { type: String, required: true, unique: true },
   profilePhoto: { type: String }, // URL for the uploaded photo
   rating: { type: Number, default: 5.0 }, // Average rating for user
