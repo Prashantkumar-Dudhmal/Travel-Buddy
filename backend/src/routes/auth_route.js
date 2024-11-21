@@ -4,7 +4,9 @@ const  zod = require("zod");
 
 
 router.get('/',(req,res)=>{
-    console.log("ha ha ha");
+    res.json({
+        msg:"Route works fine"
+    })
 })
 
 
