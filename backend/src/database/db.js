@@ -1,8 +1,7 @@
 const mongoose =require('mongoose')
-
 async function MongoConnect()
 {
-    try{const a=await mongoose.connect('mongodb+srv://prashantkumardudhmal:Pass%40123@cohortlearning.4tw40.mongodb.net/TravelBuddy');
+    try{const a=await mongoose.connect();
         console.log("db connected");
     }
     catch(e){
