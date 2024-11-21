@@ -12,7 +12,7 @@ function App() {
       path: "/",
       element: (
         <>
-          <Navbar />
+          <Navbar/>
           <Home />
         </>
       ),
@@ -21,8 +21,17 @@ function App() {
       path: "/SignIn",
       element: (
         <>
-          <Navbar />
+                    <Navbar/>
+
           <SignIn />
+        </>
+      ),
+    },
+    {
+      path: "/Book",
+      element: (
+        <>
+          Book pagee
         </>
       ),
     },
@@ -30,7 +39,8 @@ function App() {
       path: "/SignUp",
       element: (
         <>
-          <Navbar />
+                  <Navbar/>
+
           <SignUp />
         </>
       ),
@@ -39,6 +49,7 @@ function App() {
 
   return (
     <>
+
       <RouterProvider router={router} />
     </>
   );

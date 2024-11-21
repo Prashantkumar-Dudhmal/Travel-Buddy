@@ -5,7 +5,7 @@ import "./Home.css";
 const Home = () => {
   const nav = useNavigate();
   const handleGetStarted = () => {
-    nav("/SignIn");
+    nav("/Book");
   };
   return (
     <div className="homepage">
