@@ -5,52 +5,47 @@ import SignIn from "./pages/SignIn";
 import Navbar from "./components/Navbar";
 import SignUp from "./pages/SignUp";
 import "./App.css";
+ export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <>
+        <Home />
+      </>
+    ),
+  },
+  {
+    path: "/SignIn",
+    element: (
+      <>
+        <SignIn />
+      </>
+    ),
+  },
+  {
+    path: "/Book",
+    element: (
+      <>
+        Book pagee
+      </>
+    ),
+  },
+  {
+    path: "/SignUp",
+    element: (
+      <>
+        <SignUp />
+      </>
+    ),
+  },
+]);
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: (
-        <>
-          <Navbar/>
-          <Home />
-        </>
-      ),
-    },
-    {
-      path: "/SignIn",
-      element: (
-        <>
-                    <Navbar/>
-
-          <SignIn />
-        </>
-      ),
-    },
-    {
-      path: "/Book",
-      element: (
-        <>
-          Book pagee
-        </>
-      ),
-    },
-    {
-      path: "/SignUp",
-      element: (
-        <>
-                  <Navbar/>
-
-          <SignUp />
-        </>
-      ),
-    },
-  ]);
-
+  
   return (
     <>
-
-      <RouterProvider router={router} />
+      
+      {/* <RouterProvider router={router} /> */}
     </>
   );
 }

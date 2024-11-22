@@ -2,13 +2,17 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./Home.css";
+import Navbar from "../components/Navbar";
 const Home = () => {
   const nav = useNavigate();
   const handleGetStarted = () => {
     nav("/Book");
   };
   return (
+    <>
+    <Navbar></Navbar>
     <div className="homepage">
+
       <main>
         <section className="hero">
           <h2>Find Your Perfect Travel Buddy</h2>
@@ -33,6 +37,7 @@ const Home = () => {
         <p>&copy; 2024 Travel Buddy. All rights reserved.</p>
       </footer>
     </div>
+    </>
   );
 };
 

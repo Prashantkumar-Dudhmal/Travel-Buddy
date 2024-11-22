@@ -17,7 +17,9 @@ const createUser = async (req, res) => {
     try {
         // Validate request body using zod
         const Data = req.body;
-
+        if(!userSchema.parse(Data)){
+            res.send("Plz Enter the valid data")
+        }
         // Check if the user with the email exists already
         let user1 = await signUpModel.findOne({ email: Data.email });
         if (user1) {
