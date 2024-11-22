@@ -2,7 +2,7 @@ const { z } = require("zod");
 const signUpModel = require("../models/signUpModel");
 
 // JWT secret
-const JWT_SECRET = "password";
+const JWT_SECRET = "PASSWORD";
 
 // Zod schema for user validation
 const userSchema = z.object({
