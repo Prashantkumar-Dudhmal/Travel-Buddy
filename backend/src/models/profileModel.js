@@ -11,5 +11,5 @@ const UserSchema = new mongoose.Schema({
   //googleId: { type: String, unique: true, sparse: true }, // For Google login users
   createdAt: { type: Date, default: Date.now },
 });
-
-module.exports = mongoose.model('profileModel', UserSchema);
+const profileModel = mongoose.model('profileModel', UserSchema);
+module.exports = {profileModel};

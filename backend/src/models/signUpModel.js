@@ -7,5 +7,5 @@ const UserCredentials = new mongoose.Schema({
     password:{type:String,required:true},
     createdAt: { type: Date, default: Date.now },
   });
-  
-  module.exports = mongoose.model('signUpModel', UserCredentials);
+  const signUpModel = mongoose.model('signUpModel', UserCredentials);
+  module.exports = signUpModel;

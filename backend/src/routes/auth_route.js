@@ -12,8 +12,8 @@ router.get('/',(req,res)=>{
 })
 
 
-router.post('/signup',createUser)
-router.post('/signin',signIn)
+router.post('/signup',createUser);
+router.post('/signin',signIn);
 
 
 

@@ -10,5 +10,5 @@ const CarSchema = new mongoose.Schema({
   seatsAvailable: { type: Number, required: true }, // Number of seats offered for rides
   carPhoto: { type: String }, // URL for the uploaded car photo
 });
-
-module.exports = mongoose.model('carModel', CarSchema);
+const carModel = mongoose.model('carModel', CarSchema);
+module.exports = carModel;
