@@ -16,6 +16,7 @@ app.use(
 app.use("/auth", require("./src/routes/auth_route"));
 app.use("/profile", require("./src/routes/profile_route"));
 app.use("/search",require("./src/routes/trip_route"));
+app.use("/ct",require("./src/routes/booking_route"));
 
 
 app.listen(port,()=>{

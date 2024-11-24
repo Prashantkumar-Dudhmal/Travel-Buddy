@@ -1,5 +1,5 @@
 const upcomingTripModel = require('../models/upcomingTrips');
-const places = require("./src/models/places");
+const places = require("../models/places");
 
 const createTrip = async(req,res)=>{
     const data = req.body;
@@ -7,9 +7,9 @@ const createTrip = async(req,res)=>{
         source: data.source,
         destination: data.destination,
         host: data.host,
-        tripdate: data.tripdate,
+        // tripdate: data.tripdate,
         availableseats: data.availableseats,
-        car : data.car,
+        // car : data.car,
         price: data.price
     });
     res.json({
