@@ -5,7 +5,8 @@ import LandingPage from "./LandingPage";
 
 function App() {
   return (
-    <Canvas>
+    <Canvas camera={{ position: [0, 0, 5] }}>
+      <color attach="background" args={["#171720"]} />
       <OrbitControls />
       <LandingPage />
       <ambientLight />
